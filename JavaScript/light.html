@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="light" type="image" src="images/light-off.png">
+    <br>
+    <input id="controll" type="image" src="images/switch-on.png" onclick="controllLight()"> 
+    <!-- <button id="controll" onclick="controllLight()">On</button> -->
+</body>
+<script>
+    function controllLight(){
+        let controll = document.getElementById("controll");
+        let light = document.getElementById("light");
+        let body = document.getElementsByTagName("body")[0];
+        if(controll.src == "http://127.0.0.1:5500/images/switch-on.png"){
+            light.src = "images/light-on.png";
+            controll.src = "images/switch-off.png";
+            body.style.backgroundColor = "#ffffff";
+        }
+        else
+        {
+            light.src = "images/light-off.png";
+            controll.src = "images/switch-on.png";
+            body.style.backgroundColor = "#333333";
+        }
+    }
+</script>
+</html>

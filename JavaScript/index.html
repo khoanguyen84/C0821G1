@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bodyId">
+    <!-- onmouseover="showDatetime(this)" -->
+    <button 
+        onmouseover="showDatetime()"
+        onmouseout="this.innerText='Show datetime'"
+    >
+        Show datatime
+    </button>
+
+    <a href="js.html">Next</a>
+
+    <br>
+    <label>Change page color</label> <input type="color" 
+        oninput="document.getElementById('bodyId').style.backgroundColor = this.value;">
+
+    <br>
+    <input type="range" min="100" max="900" oninput="changeValue(this)"> <label class="rangeClass"></label>
+</body>
+<script>
+    // function showDatetime(element){
+    //     element.innerText = 'Hiển thị ngày tháng'; 
+    //     element.style.backgroundColor='red'; 
+    //     element.style.fontSize= '40px';
+    //     element.style.color='white';
+    // }
+    // function showDatetime(){
+    //     let element = document.getElementsByTagName("button")[0];
+    //     element.innerText = 'Hiển thị ngày tháng'; 
+    //     element.style.backgroundColor='red'; 
+    //     element.style.fontSize= '40px';
+    //     element.style.color='white';
+    // }
+</script>
+<script src="script.js"></script>
+</html>
