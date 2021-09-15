@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Average score</td>
+            <td>
+                <input type="number">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Rank" onclick="rank()">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+
+            </td>
+        </tr>
+    </table>
+    <script>
+        function rank() {
+            let averageScore = Number(document.getElementsByTagName("input")[0].value);
+            let msg = "";
+            switch (averageScore > 10 || averageScore < 0 ? -1 : Math.floor(averageScore)) {
+                case 10:
+                case 9:
+                    msg = `${averageScore} is excellent`;
+                    break;
+                case 8:
+                    msg = `${averageScore} is Good`;
+                    break;
+                case 7:
+                    msg = `${averageScore} is Pretty Good`;
+                    break;
+                case 6:
+                case 5:
+                    msg = `${averageScore} is medium`;
+                    break;
+                case 4:
+                case 3:
+                case 2:
+                case 1:
+                case 0:
+                    msg = `${averageScore} is bad`;
+                    break;
+                default:
+                    msg = `${averageScore} is invalid`;
+                    break;
+            }
+            document.getElementsByTagName("td")[3].innerHTML = `<h3>${msg}</h3>`;
+        }
+        // let number = 5;
+        // if(number % 2 == 0){
+        //     document.write(`${number} is an even`);
+        // }
+        // else{
+        //     document.write(`${number} is an odd`);
+        // }
+
+        // number % 2 == 0 ? document.write(`${number} is an even`) : document.write(`${number} is an odd`);
+
+        // document.write(`${number} is an ${ number % 2 == 0 ? "even" : "odd"} <br>`);
+
+        // let n1 = 5, n2 = 8, n3 = 4;
+        // if(n1 > n2 && n1 > n3){
+        //     document.write(`max value is ${n1}`); 
+        // }
+        // else{
+        //     if(n2 > n3){
+        //         document.write(`max value is ${n2}`);
+        //     }
+        //     else{
+        //         document.write(`max value is ${n3}`);
+        //     }
+        // }
+        // let max = 0;
+
+        // max = (n1 > n2 && n1 > n3) ? n1 : ((n2 > n3) ? n2 : n3);
+        // document.write(`max value is ${max}`);
+
+        // document.write(`max value is ${(n1 > n2 && n1 > n3 ) ? n1 : ( (n2 > n3 ) ? n2 : n3 )}`);
+
+        // let averageScore = 10.6;
+        // switch ( averageScore > 10 || averageScore < 0 ? -1 : Math.floor(averageScore)) {
+        //     case 10:
+        //     case 9:
+        //         document.write(`${averageScore} is excellent`);
+        //         break;
+        //     case 8:
+        //         document.write(`${averageScore} is Good`);
+        //         break;
+        //     case 7:
+        //         document.write(`${averageScore} is Pretty Good`);
+        //         break;
+        //     case 6:
+        //     case 5:
+        //         document.write(`${averageScore} is medium`);
+        //         break;
+        //     case 4:
+        //     case 3:
+        //     case 2:
+        //     case 1:
+        //     case 0:
+        //         document.write(`${averageScore} is bad`);
+        //         break;
+        //     default:
+        //         document.write(`${averageScore} is invalid`);
+        //         break;
+        // }
+        // switch (averageScore > 10 || averageScore < 0 ? "invalid" :
+        //     (averageScore >= 9 ? "Excellent" :
+        //         (averageScore >= 8 ? "Good" :
+        //             (averageScore >= 7 ? "PrettyGood" :
+        //                 (averageScore >= 5 ? "Medium" : "Bad"))))) {
+        //     case "Excellent":
+        //         {
+        //             document.write(`${averageScore} is excellent`);
+        //             break;
+        //         }
+        //     case "Good":
+        //         {
+        //             document.write(`${averageScore} is Good`);
+        //             break;
+        //         }
+        //     case "PrettyGood":
+        //         {
+        //             document.write(`${averageScore} is Pretty Good`);
+        //             break;
+        //         }
+        //     case "Medium":
+        //         {
+        //             document.write(`${averageScore} is Medium`);
+        //             break;
+        //         }
+        //     case "Bad":
+        //         {
+        //             document.write(`${averageScore} is Bad`);
+        //             break;
+        //         }
+        //     default:
+        //         {
+        //             document.write(`${averageScore} is invalid value`);
+        //             break;
+        //         }
+        // }
+
+    </script>
+</body>
+
+</html>
