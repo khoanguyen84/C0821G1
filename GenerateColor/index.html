@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            text-align: center;
+        }
+        div{
+            width: 400px;
+            height: 100px;
+            margin: 0px auto;
+            text-align: center;
+            padding-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <div id="color-area">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Red</td>
+            <td>Green</td>
+            <td>Blue</td>
+            <td>Aplpha</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="range" min="0" max="255" id="red" value="255" oninput="changeColor()">
+            </td>
+            <td>
+                <input type="range" min="0" max="255" id="green" value="99" oninput="changeColor()">
+            </td>
+            <td>
+                <input type="range" min="0" max="255" id="blue" value="71" oninput="changeColor()">
+            </td>
+            <td>
+                <input type="range" min="0" max="100" id="alpha" value="50" oninput="changeColor()">
+            </td>
+        </tr>
+        <tr>
+            <td id="red-value"></td>
+            <td id="green-value"></td>
+            <td id="blue-value"></td>
+            <td id="alpha-value"></td>
+        </tr>
+    </table>
+    <script src="color.js"></script>
+</body>
+</html>
