@@ -75,3 +75,19 @@ while(number != 0){
     document.write(`${number} <br>`);
     number = Number(prompt("Enter number:"));
 }
+
+
+function sum(number1, number2) {
+    return number1 + number2;
+}
+
+function process(operator){
+    let result;
+    if(operator == 'cong'){
+        number1 = 5;
+        number2 = 7;
+        result = sum(number1, number2);
+    }
+
+    
+}
