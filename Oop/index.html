@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <script>
+        let giau = {};
+        giau.fullname = "Huỳnh Văn Giàu";
+        // giau["age"] = 18;
+        giau.age = 18;
+        giau.gender = "Nam";
+
+        giau.info = function(){
+            return `Fullname: ${this.fullname}, age: ${this.age}, gender: ${this.gender}`;
+        }
+
+
+        let long = {
+            fullname : "Thành Long",
+            age: 18,
+            gender: "Name",
+            info: function(){
+                return `Fullname: ${this.fullname}, age: ${this.age}, gender: ${this.gender}`;
+            }
+        }
+
+        function Student(fn, a, g){
+            this.fullname = fn;
+            this.age = a;
+            this.gender = g;
+            this.info = function(){
+                return `Fullname: ${this.fullname}, age: ${this.age}, gender: ${this.gender}`;
+            }
+        }
+
+        let tan = new Student("Tân Bùi", 18, "Nam");
+        let thanh = new Student("Thành", 18, "Nam");
+
+
+        function Human(){
+            this.fullname;
+            this.age;
+            this.gender;
+
+            this.setName = function(name){
+                this.fullname = name;
+            }
+
+            this.setAge = function(age){
+                this.age = age;
+            }
+        }
+
+        let hoang = new Human();
+        hoang.setAge(18);
+        hoang.setName("Hoàng");
+
+    </script>
+</body>
+</html>
