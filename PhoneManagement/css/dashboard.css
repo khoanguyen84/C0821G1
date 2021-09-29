@@ -1,0 +1,110 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    max-width: 900px;
+    display: block;
+    margin: 0px auto;
+}
+
+.row{
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.add-product-area{
+    width: 50%;
+    background-color: lightgray;
+    padding:20px 5px;
+    border-radius: 5px;
+}
+
+input{
+    padding:5px;
+    width: 300px;
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    padding:4px 10px;
+    border-radius: 2px;
+}
+
+.btn-primary{
+    background-color: #0074d9;
+    color:white;
+}
+
+.btn-primary:hover{
+    background-color: #0495c9;
+}
+
+.btn-success{
+    background-color: green;
+    color:white;
+}
+
+.btn-success:hover{
+    background-color: limegreen;
+}
+
+.btn-danger{
+    background-color: red;
+    color:white;
+}
+
+.btn-danger:hover{
+    background-color: lightcoral;
+}
+
+.btn-warning{
+    background-color: yellow;
+    color:gray;
+}
+
+.btn-warning:hover{
+    background-color: orange;
+}
+
+#tbProduct{
+    width: 100%;
+}
+
+.thead-dark{
+    background-color: #333333;
+    color: white;
+}
+
+#tbProduct, td, th, tr{
+    border-collapse: collapse;
+}
+
+#tbProduct td,th{
+    border:1px solid gray;
+    padding: 5px 2px;
+}
+
+#tbProduct>tbody>tr:nth-child(even){
+    background-color: gray;
+}
+
+#tbProduct>tbody>tr:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#tbProduct td:first-child{
+    width: 70%;
+}
+
+#tbProduct td:last-child{
+    text-align: center;
+}
+
+.d-none{
+    display: none;
+}

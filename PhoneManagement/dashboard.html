@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3 class="heading-3">Add New Product</h3>
+            <div class="add-product-area">
+                <input type="text" id="product_name">
+                <a href="javascript:;" class="btn btn-primary" onclick="addProduct()">Add</a>
+            </div>
+        </div>
+        <div class="row">
+            <table id="tbProduct">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Product name</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

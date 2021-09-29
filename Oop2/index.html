@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Human{
+            constructor(fullname, age, gender){
+                this.fullname = fullname,
+                this.age = age,
+                this.gender = gender
+            }
+
+            info(){
+                return `fullname: ${this.fullname}, age: ${this.age}, gender: ${this.gender}`;
+            }
+
+            static slogen(){
+                return "still breath still live";
+            }
+        }
+
+        class Student extends Human{
+            constructor(fullname, age, gender, email){
+                super(fullname, age, gender),
+                this.email = email
+            }
+
+            // info2(){
+            //     return `fullname: ${this.fullname}, age: ${this.age}, gender: ${this.gender}, email: ${this.email}`
+            // }
+            info(){
+                // return `${super.info()}, email: ${this.email}`;
+                return `fullname: ${this.fullname}, age: ${this.age}, email: ${this.email}`;
+            }
+        }
+
+        class Fruit{
+            constructor(){
+
+            }
+        }
+
+        let apple  = new Fruit();
+
+        let tien = new Human("Tiến", 18, "Nam");
+        let thanh = new Student("Thành", 10, "Nam", "thanh@gmail.com");
+        Human.slogen();
+
+        Math.random();
+        let arr = new Array();
+
+        let arr = new Array(1,2,4);
+    </script>
+</body>
+</html>
