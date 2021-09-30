@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,44 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
             <h3 class="heading-3">Add New Product</h3>
             <div class="add-product-area">
-                <input type="text" id="product_name">
-                <a href="javascript:;" class="btn btn-primary" onclick="addProduct()">Add</a>
+                <div>
+                    <label>Product name</label>
+                    <input type="text" id="product_name">
+                </div>
+                <div>
+                    <label>Price</label>
+                    <input type="text" id="price">
+                </div>
+                <div>
+                    <label>Quantity</label>
+                    <input type="text" id="quantity">
+                </div>
+                <div>
+                    <label>Picture</label>
+                    <input type="text" id="picture">
+                </div>
+                <div>
+                    <a href="javascript:;" class="btn btn-primary" onclick="addProduct()">Add</a>
+                </div>
+                
             </div>
         </div>
         <div class="row">
             <table id="tbProduct">
                 <thead class="thead-dark">
                     <tr>
+                        <th>#ID</th>
                         <th>Product name</th>
+                        <th>Picture</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -33,4 +58,5 @@
 
     <script src="scripts/dashboard.js"></script>
 </body>
+
 </html>

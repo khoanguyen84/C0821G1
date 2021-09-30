@@ -22,6 +22,16 @@
     border-radius: 5px;
 }
 
+.add-product-area div{
+    width: 100%;
+    display: block;
+    margin-bottom: 7px;
+}
+label{
+    width: 200px;
+    display: block;
+}
+
 input{
     padding:5px;
     width: 300px;
@@ -97,14 +107,31 @@ input{
     cursor: pointer;
 }
 
-#tbProduct td:first-child{
+/* #tbProduct td:first-child{
     width: 70%;
 }
 
 #tbProduct td:last-child{
     text-align: center;
-}
+} */
 
 .d-none{
     display: none;
+}
+
+.picture{
+    width: 40px;
+    height: 60px;
+}
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.input-short{
+    padding:5px;
+    width: 150px;
 }
