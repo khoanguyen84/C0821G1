@@ -38,5 +38,20 @@ let result = numbers.map2(handleMap)
 // console.log(result)
 
 
-console.log(numbers.includes(91))
+// console.log(numbers.includes(91))
 
+// Array.prototype.includes2 = function(number){
+//     for(let i=0; i< this.length ;i++){
+//         if(this[i] === number)
+//             return true;
+//     }
+//     return false;
+// }
+
+// console.log(numbers.includes2(91))
+
+let arr = numbers.filter(function(number){
+    return number > 8;
+})
+
+console.log(arr)
