@@ -43,18 +43,60 @@
 // console.log(obj2)
 // console.log(obj1)
 
-function sum(...rest){
+function sum(...rest) {
     console.log(rest)
     let total = 0;
-    for(let i=0; i< rest.length; i++){
+    for (let i = 0; i < rest.length; i++) {
         total += rest[i]
     }
     return total;
 }
 // sum(4,5,6,7,8,8,9,9,9,8)
-let array = [4,5,6,7,8,8,9,9,9,8];
+let array = [4, 5, 6, 7, 8, 8, 9, 9, 9, 8];
 console.log(sum(array));
 
 // function calcArray(array){
 
 // }
+
+class Student {
+    hello() {
+
+    }
+}
+
+
+// let logger = function(msg){
+//     console.log(msg)
+// }
+// let logger = msg => console.log(msg)
+
+// let hello = function(){
+//     console.log("Hello world")
+// }
+// let hello = ()=> console.log("Hello world")
+// hello()
+
+// let checkEvenNumber = function(number){
+//     if(number % 2 == 0)
+//         return `${number} is even`
+//     return `${number} is odd`
+// }
+// let checkEvenNumber = (number) => {
+//     if(number % 2 == 0)
+//         return `${number} is even`
+//     return `${number} is odd`
+// }
+
+// console.log(checkEvenNumber(5))
+
+let numbers = [3, 4, 5, 6, 7, 8, 9, 9, 0];
+// let result = numbers.reduce(function(prev,curr){
+//     return prev + curr;
+// })
+// let result = numbers.reduce((prev, curr) => prev + curr)
+// let result = numbers.map(function (number) {
+//     return number * 2;
+// })
+let result = numbers.map((number) => number * 2)
+console.log(result)

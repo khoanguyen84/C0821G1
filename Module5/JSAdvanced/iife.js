@@ -42,11 +42,11 @@ var number = 1;
         }
     } 
 }
-console.log(number);
+console.log(number)
 
-// (function(){
-//     console.log("Hello")
-// })()
+(function(){
+    console.log("Hello")
+})()
 
 // function hello(){
 //     console.log("Hello")
