@@ -134,3 +134,10 @@ function reset(){
     document.getElementById("totalMatrixValues").innerHTML = "";
     document.getElementById("countMaxValueInMatrix").innerHTML = "";
 }
+
+function main(){
+    let matrix = generateMatrix(5, 5, 10, 20)
+    console.log(matrix);
+}
+
+main();
