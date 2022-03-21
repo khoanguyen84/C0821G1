@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job management</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="h4">All jobs</div>
+        </div>
+        <div class="row">
+            <a href="javascript:;" class="btn btn-primary btn-sm">
+                <i class="fa fa-plus"></i>
+                Create job
+            </a>
+            <a href="javascript:;" class="btn btn-secondary btn-sm ml-2" onclick="job.removeJobs()">
+                <i class="fa fa-trash"></i>
+            </a>
+        </div>
+        <div class="row">
+            <table id="tbJobs" class="table table-sm">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            <input type="checkbox" onclick="job.selectAll(this)">
+                        </th>
+                        <th>Job Id</th>
+                        <th>Job Name</th>
+                        <th>Avatar</th>
+                        <th>Created date</th>
+                        <th>Deadline</th>
+                        <th>Employer</th>
+                        <th>Leader</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootbox/bootbox.all.js"></script>
+    <script src="node_modules/moment/moment.js"></script>
+    <script src="scripts/job.js"></script>
+</body>
+</html>
