@@ -90,6 +90,8 @@ job.selectAll = (cbxAll) => {
     for (cbx of checkboxs) {
         cbx.checked = cbxAll.checked;
     }
+    if(!cbxAll.checked)
+        job.removeItem = [];
 }
 job.openModal = () => {
     job.resetForm();
