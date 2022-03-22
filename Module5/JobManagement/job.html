@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,14 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
             <div class="h4">All jobs</div>
         </div>
         <div class="row">
-            <a href="javascript:;" class="btn btn-primary btn-sm">
+            <a href="javascript:;" class="btn btn-primary btn-sm" onclick="job.openModal()">
                 <i class="fa fa-plus"></i>
                 Create job
             </a>
@@ -24,7 +26,7 @@
             </a>
         </div>
         <div class="row">
-            <table id="tbJobs" class="table table-sm">
+            <table id="tbJobs" class="table table-hover table-striped table-sm">
                 <thead class="thead-dark">
                     <tr>
                         <th>
@@ -41,16 +43,114 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                 </tbody>
             </table>
         </div>
     </div>
+    <!-- The Modal -->
+    <div class="modal" id="createEditJob">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Create job</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form id="createEditJobForm">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label for="jobname">Job name</label>
+                                    <input type="text" id="jobname" name="jobname" class="form-control"
+                                        data-rule-required = "true"
+                                        data-msg-required = "Job name is required"
+                                    >
+                                    <input type="hidden" name="jobId" id="jobId">
+                                </div>
+                                <div class="form-group">
+                                    <label for="created-date">Created Date</label>
+                                    <input type="date" id="created-date" name="created-date" 
+                                    class="form-control" data-rule-required="true" data-msg-required = "Created date is required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="deadline">Deadline</label>
+                                    <input type="date" id="deadline" name="deadline" class="form-control"
+                                    data-rule-required="true" data-msg-required = "Deadline is required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="employer">Employer</label>
+                                    <input type="text" id="employer" name="employer" class="form-control"
+                                    data-rule-required = "true"
+                                        data-msg-required = "Employer is required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="leader">Leader</label>
+                                    <input type="text" id="leader" name="leader" class="form-control"
+                                    data-rule-required = "true"
+                                        data-msg-required = "Leader is required">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <!-- <img class="img-lg" id="show-avatar" name="show-avatar"
+                                        src="https://via.placeholder.com/250" alt=""> -->
+                                    <img class="img-lg" id="show-avatar" name="show-avatar" alt="">
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label></label>
+                                    <div class="custom-file">
+                                        <input type="file" accept="image/*" class="custom-file-input" id="avatar">
+                                        <label class="custom-file-label" for="avatar">Choose avatar</label>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <a href="javascript:;" class="btn btn-warning" onclick="job.save()">
+                        <i class="fa fa-save"></i>
+                        Save
+                    </a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        <i class="fa fa-times"></i>
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/bootbox/bootbox.all.js"></script>
     <script src="node_modules/moment/moment.js"></script>
+    <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="scripts/job.js"></script>
+    <script>
+        // $("#show-avatar").on("click", function (e) {
+        //     var fileName = $(this).val().split("\\").pop();
+        //     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        //     let fakeAvatarURL = URL.createObjectURL(e.target.files[0])
+        //     document.querySelector('#show-avatar').src = fakeAvatarURL;
+        //     console.log(fakeAvatarURL)
+        // })
+        $(".custom-file-input").on("change", function (e) {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            let fakeAvatarURL = URL.createObjectURL(e.target.files[0])
+            document.querySelector('#show-avatar').src = fakeAvatarURL;
+            console.log(fakeAvatarURL)
+        });
+    </script>
 </body>
+
 </html>

@@ -3,6 +3,7 @@
     "@fortawesome/fontawesome-free": "^5.1.0-9",
     "bootbox": "^5.5.2",
     "bootstrap": "^4.6.0",
+    "jquery-validation": "^1.19.2",
     "moment": "^2.29.1"
   }
 }

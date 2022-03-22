@@ -6,3 +6,4 @@
 + npm i @fortawesome/fontawesome-free@5.1.0-9
 + npm i moment
 + npm i bootbox
++ npm i jquery-validation@1.19.2
